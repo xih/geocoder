@@ -2,13 +2,14 @@
 
 import React from "react";
 import Map, { GeolocateControl, ScaleControl } from "react-map-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
 import Geocoder from "./geocoder";
+import { env } from "@/env.js";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 export default function Mapbox1() {
   return (
     <Map
-      mapboxAccessToken={process.env.NEXT_PUBLIC_LOCAL_MAPBOX_TOKEN}
+      mapboxAccessToken={env.NEXT_PUBLIC_MAPBOX_TOKEN}
       initialViewState={{
         longitude: -122.4,
         latitude: 37.8,
