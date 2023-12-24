@@ -2,15 +2,23 @@ import { CreatePost } from "@/app/_components/create-post";
 import { getServerAuthSession } from "@/server/auth";
 import { api } from "@/trpc/server";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default async function Home() {
   // const hello = await api.post.hello.query({ text: "from tRPC" });
   // const session = await getServerAuthSession();
 
   return (
-    <main className="container m-10">
-      <Link href={"/map"}>Maplibre dark mode</Link> <br />
-      <Link href={"/mapbox1"}>Mapbox w geocoder</Link>
+    <main className="container m-10 flex flex-col items-start	gap-1">
+      {/* <Button className="flex" variant="ghost">
+        Link
+      </Button> */}
+      <Link className="cursor-pointer hover:underline" href={"/map"}>
+        Maplibre dark mode
+      </Link>{" "}
+      <Link className="cursor-pointer hover:underline" href={"/mapbox1"}>
+        Mapbox w geocoder
+      </Link>
     </main>
   );
 }
