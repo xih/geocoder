@@ -9,7 +9,7 @@ export default async function Home() {
   // const session = await getServerAuthSession();
 
   return (
-    <main className="container m-10 flex flex-col items-start	gap-1">
+    <main className="container mt-5 flex flex-col	items-start gap-1">
       {/* <Button className="flex" variant="ghost">
         Link
       </Button> */}
